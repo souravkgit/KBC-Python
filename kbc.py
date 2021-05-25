@@ -11,7 +11,7 @@ def lifeline(ques):
         while reply:
             ans = input('Your choice ( 3-4 ) : ')
             if ans=="lifeline":
-                print("chutiya h kya .khatam ho gyi beta lifeline.\nwapas daal ans yaad rakh is baar 3 se 4 daalna wrna maanunga hi nhi")
+                print("You Can't opt for lifeline anymore , please select from the remaining options : ")
             else:
                 reply=False
     else:
@@ -21,7 +21,7 @@ def lifeline(ques):
         while reply:
             ans = input('Your choice ( 1-2 ) : ')
             if ans=="lifeline":
-                print("chutiya h kya .khatam ho gyi beta lifeline.\nwapas daal ans yaad rakh is baar 1 se 2 daalna wrna maanunga hi nhi")
+                print("You Can't opt for lifeline anymore , please select from the remaining options : ")
             else:
                 reply=False
     return ans
@@ -49,11 +49,11 @@ def kbc():
                     ll-=1
                     nhiliya = False
                 else:
-                    print("chutiya h kya .khatam ho gyi beta lifeline.\nwapas daal ans yaad rakh is baar 1 se 4 daalna wrna maanunga hi nhi")
+                    print("You Can't opt for lifeline anymore , please select from the options : ")
             else:
                 nhiliya=False
         if ans=="quit":
-            print("beta gar ja or so ja.tu jeeta h sirf "+str(won))
+            print("Congrats , You Have Won "+str(won))
             break        
         if isAnswerCorrect(QUESTIONS[i-1], int(ans) ):
             won+=QUESTIONS[i-1]["money"]
@@ -66,11 +66,11 @@ def kbc():
                 minwon=320000
                 print("congo you have cleared second level now your minimum money you cane take to home is increased to 3,20,000")
             if i==15:
-                print("hur beta jeetgo.....\n jeete h "+str(won)+"rupees ab aadha idhar hi \n rakh de aur tere waale me se aadha donation me dede.dhanyawad milte h kal")
+                print("Congrats You Have Won This Game And Your Winning Amount Is "+str(won))
                 break           
         else:
             print('\nIncorrect !')
             print("option"+str(QUESTIONS[i-1]["answer"]) +"is the correct answer")
-            print("saale moj krdi jeet ke le jaa rha h tu maatra "+str(minwon)+" rupiye.isse achha to quit hi kr deta btc.")
+            print("You Have Won"+str(minwon))
             gameover=True
 kbc()
